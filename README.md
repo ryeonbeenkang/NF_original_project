@@ -4,12 +4,18 @@ This project is to review and predict IMDB scores of Netflix original films. The
 
 # Datasets
 1. 컬럼 파악:
-   (1) [Title] - Object
+   (1) [Title] - Objectp
+   
    (2) [Genre] - Object
+   
    (3) [Premiere] - datetime64[ns]
+   
    (4) [Runtime] - float64
+   
    (5) [IMDB Score] - object
+   
    (6) [Language] - object
+   
  6가지 컬럼으로 구성
 
 
