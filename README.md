@@ -4,7 +4,10 @@ This project is to review and predict IMDB scores of Netflix original films. The
 
 # Datasets
 1. 컬럼 파악:
+
+   
 ![dtypes](https://github.com/ryeonbeenkang/NF_original_project/assets/47935123/0db869af-ccbc-406f-bbeb-ce47f73f37c2)
+
 
          총, 6가지 컬럼으로 구성
 
