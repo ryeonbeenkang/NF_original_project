@@ -61,6 +61,13 @@
 
 ## 3. T-test(One-sample, two-sample, pair-sample)
 
+   **(가설1) 장르별 평점이 다를 수 있는지 확인**
+
+
+
+   **(가설2) 언어별 평점이 다를 수 있는지 확인**
+
+
 
 
 ## 4. Implication & recommendation on new Netflix original Series production
@@ -73,7 +80,7 @@
 
 
 
-# Difficulty & Limitation
+## 6. Difficulty & Limitation
 
 
 
