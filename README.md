@@ -5,7 +5,7 @@
 ### The dataset was retrieved from Kaggle 'Netflix Original Films &amp; IMDB Scores'(link: https://www.kaggle.com/datasets/luiscorter/netflix-original-films-imdb-scores).
 
 
-# Datasets
+# EDA Analysis & data visualization
 ## **1. 컬럼 파악**:
    
 ![dtypes](https://github.com/ryeonbeenkang/NF_original_project/assets/47935123/0db869af-ccbc-406f-bbeb-ce47f73f37c2)
@@ -55,16 +55,7 @@
 
    
 
-
-# EDA Analysis & data visualization
-
-
-
-
-
 # T-test(One-sample, two-sample, pair-sample)
-
-
 
 
 
