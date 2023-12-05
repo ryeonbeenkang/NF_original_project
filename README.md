@@ -10,12 +10,20 @@ This project is to review and predict IMDB scores of Netflix original films. The
 총, 6가지 컬럼으로 구성
 
 
-2. 결측치: 116번째 row에 [Language]의 값이 null이고, [IMDB Score]가 'English'로 잘 못 표시된 row를 제거.
+
+2. 결측치
+   (1) 116번째 row에 [Language]의 값이 null이고, [IMDB Score]가 'English'로 잘 못 표시된 row를 제거.
  ![ng_row](https://github.com/ryeonbeenkang/NF_original_project/assets/47935123/8e491339-7b72-4bd8-9966-af55c9507eb3)
    ```
     df = df.drop(116)
    ```
 
+3. 컬럼제거
+   (1) [Premiere]컬럼의 값들을 value_counts()로 확인해 본 결과, 1~5의 값을 골고루 가지며, 특정일자에 집중된다던지 하는 현상이 보이지 않았다. 따라서, '개봉일자'는 평점에 큰 영향을 주지 않는다고 판단하여, 컬럼을 제거하기로 결정 하였다.
+    
+   ```
+   df["Premiere"].value_counts()
+   ```
 
 
 # EDA Analysis & data visualization
