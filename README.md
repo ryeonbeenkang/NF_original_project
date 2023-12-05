@@ -4,19 +4,9 @@ This project is to review and predict IMDB scores of Netflix original films. The
 
 # Datasets
 1. 컬럼 파악:
-   (1) [Title] - Objectp
-   
-   (2) [Genre] - Object
-   
-   (3) [Premiere] - datetime64[ns]
-   
-   (4) [Runtime] - float64
-   
-   (5) [IMDB Score] - object
-   
-   (6) [Language] - object
-   
- 6가지 컬럼으로 구성
+![dtypes](https://github.com/ryeonbeenkang/NF_original_project/assets/47935123/0db869af-ccbc-406f-bbeb-ce47f73f37c2)
+
+         총, 6가지 컬럼으로 구성
 
 
 3. 결측치: 116번째 row에 [Language]의 값이 null이고, [IMDB Score]가 'English'로 잘 못 표시된 row를 제거.
