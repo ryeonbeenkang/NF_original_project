@@ -6,7 +6,11 @@ This project is to review and predict IMDB scores of Netflix original films. The
 1. 컬럼 파악: [Title], [Genre],[Premiere],[Runtime],[IMDB Score],[Language]의 6가지 컬럼으로 구성
 
 
-2. 결측치
+2. 결측치: 116번째 row에 [Language]의 값이 null이고, [IMDB Score]가 'English'로 잘 못 표시된 row를 제거.
+ ![ng_row](https://github.com/ryeonbeenkang/NF_original_project/assets/47935123/8e491339-7b72-4bd8-9966-af55c9507eb3)
+   ```
+    df = df.drop(116)
+   ```
 
 
 
