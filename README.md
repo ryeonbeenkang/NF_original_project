@@ -39,8 +39,8 @@
    (1) 컬럼 [Language] & [Genre] value_counts()에 10 이상이라는 조건을 달아 본 결과, [Language]컬럼은 'English'에 ["Genre"]컬럼은 'Documentary'컬럼에 쏠려 있는 현상을 볼 수 있었다 
 
    ```
-   df["Language"].value_counts()[df['Language'].value_counts() >= 10]
    df["Genre"].value_counts()[df['Genre'].value_counts() >= 10]
+   df["Language"].value_counts()[df['Language'].value_counts() >= 10]   
    ```
 
    ![1](https://github.com/ryeonbeenkang/NF_original_project/assets/47935123/43474e0f-ac76-4820-af21-d8ae74c13c49)
