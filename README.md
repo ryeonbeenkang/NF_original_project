@@ -1,11 +1,11 @@
 # Netflix_original_project 
 
-## Introduction
+## 1. Introduction
 ### This project was done to review what i learned in terms of 'EDA Analysis','Data Visualization' and 'Statistical Hypothesis Test'. The main focus of this project is to analyze the data of 'Netflix Original Series' and to test if the hypotheses are agreeable by utilizing 'T-test' method. 
 ### The dataset was retrieved from Kaggle 'Netflix Original Films &amp; IMDB Scores'(link: https://www.kaggle.com/datasets/luiscorter/netflix-original-films-imdb-scores).
 
 
-## EDA Analysis & data visualization
+## 2. EDA Analysis & data visualization
 ### **1. 컬럼 파악**:
    
 ![dtypes](https://github.com/ryeonbeenkang/NF_original_project/assets/47935123/0db869af-ccbc-406f-bbeb-ce47f73f37c2)
@@ -55,16 +55,16 @@
 
    
 
-## T-test(One-sample, two-sample, pair-sample)
+## 3. T-test(One-sample, two-sample, pair-sample)
 
 
 
-## Implication & recommendation on new Netflix original Series production
+## 4. Implication & recommendation on new Netflix original Series production
 
 
 
 
-## Insights
+## 5. Insights
 
 
 
