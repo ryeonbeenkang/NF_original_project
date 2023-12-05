@@ -1,5 +1,7 @@
 # NF_original_project Introduction
-This project is to review and predict IMDB scores of Netflix original films. The dataset is from Kaggle 'Netflix Original Films &amp; IMDB Scores'(link: https://www.kaggle.com/datasets/luiscorter/netflix-original-films-imdb-scores)
+## This project was done to review what i leanred in terms of 'EDA Analysis','Data Visualization' and 'Statisticsl Hypothesis Test'. The main focus of this project is to analyze the data of 'Netflix Original Series' and to test if the hypotheses are agreeable by utilizing 'T-test' method. 
+
+## The dataset was retrieved from Kaggle 'Netflix Original Films &amp; IMDB Scores'(link: https://www.kaggle.com/datasets/luiscorter/netflix-original-films-imdb-scores).
 
 
 # Datasets
