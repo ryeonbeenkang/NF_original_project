@@ -76,9 +76,55 @@
 
 ## 3. T-test(One-sample, two-sample, pair-sample)
 
+   ** T-test에 앞서 ["Genre"]와 ["Language"]컬럼은 수치 데이터의 형태가 아니므로, LabelEncoder()를 활용해 수치화 작업 실시 **
+
+   ```
+   df["is_genre"] = label_encoder.fit_transform(df["Genre"])
+   df["is_language"] = label_encoder.fit_transform(df["Language"])
+   ```
+   
+
    **(가설1) 장르별 1위 Documentary장르와 2위 Drama장르의 차이는 유의미 한지?**
+   
+   
+   ```
+   # Documentary의 label encoding 한 수는 45
+   genre_docu = df[df["is_genre"] == 45]["IMDB Score"]
+   # Drama의 label encoding 한 수는 46
+   genre_drama = df[df["is_genre"] == 46]["IMDB Score"]
+   ```
+   
+   각 변수로 지정해 준 이후 T통계량과 Pvalue를 계산
 
+   ```
+   from scipy.stats import ttest_ind
 
+   t_statistic, pvalue = ttest_ind(genre_docu, genre_drama)
+   
+   print(f"T통계량: {t_statistic}")
+   print(f"Pvalue: {pvalue}")
+   ```
+
+   결과:
+      T통계량: 5.2295343458734544
+      Pvalue: 3.767793451079555e-07
+
+   <통계적 가설 검정 >
+   1. 귀무가설, 대립가설, 유의수준 설정
+    - 귀무가설: 1위 Documentary와 2위 Drama의 차이는 없다
+    - 대립가설: 1위 Documentary와 2위 Drama의 차이는 유의미 하게 있다
+    - 허용가능한 1종 오류의 최대수준(유의수준): 0.05
+ 
+   2. 검정통계량 계산
+    -  5.2295343458734544
+   
+   3. P-value계산
+    - 3.767793451079555e-07
+   
+   4. 통계적 의사결정
+    - p-value가 유의수준 0.05보다 작으크로 기무가설을 기각하고, 대립가설을 채택한다. 즉, 1,2위의 차이는 유의미 하다
+
+   
 
    **(가설2) 언어별 1위 English와 2위 Hindi언어의 차이는 유의미 한지?**
 
