@@ -131,19 +131,76 @@
    **(가설2) 언어별 1위 English와 2위 Hindi언어의 차이는 유의미 한지?**
 
 
+   ```
+   # English의 label encoding 한 수는 2
+   lang_en = df[df["is_language"] == 2]["IMDB Score"]
+   # Hindi의 label encoding 한 수는 18
+   lang_hin = df[df["is_language"] == 18]["IMDB Score"]
+   ```
+
+   각 변수로 지정해 준 이후 T통계량과 Pvalue를 계산
+
+   ```
+   from scipy.stats import ttest_ind
+
+   t_statistic, pvalue = ttest_ind(lang_en, lang_hin)
+   
+   print(f"T통계량: {t_statistic}")
+   print(f"Pvalue: {pvalue}")
+   ```
+
+   결과:
+      T통계량: 5.2295343458734544
+      Pvalue: 3.767793451079555e-07
+
+   ```
+   <통계적 가설 검정 >
+   1. 귀무가설, 대립가설, 유의수준 설정
+    - 귀무가설: 1위 English와 2위 Hindi의 차이는 없다
+    - 대립가설: 1위 English와 2위 Hindi의 차이는 유의미 하게 있다
+    - 허용가능한 1종 오류의 최대수준(유의수준): 0.05
+    
+   2. T통계량 계산
+    -  2.3858493806417695
+   
+   3. P-value계산
+    - 0.017470645954537373
+   
+   4. 통계적 의사결정
+    - p-value가 유의수준 0.05보다 작으크로 기무가설을 기각하고, 대립가설을 채택한다. 즉, English와 Hindi의 차이는 유의미 하다
+   ```
+
 
 
 ## 4. Implication & recommendation on new Netflix original Series production
+
+   **넷플릭스 오리지널 시리즈 제작 방향에 대한 제언**
+   
+   (1) 지속적으로 신규 구독자수를 늘리고, 기존 구독자의 이탈을 방지해야하는 넷플릭스의 비즈니스 특성에 근거에 생각해 볼때, Documentary장르의 오리지널 시리즈를 만들어 가는것이 좋다고 판단된다. 
+   
+   (2) 위와 같은 이유로, English언어로 만들어진 오리지널 시리즈 제작이 넷플릭스 비즈니스에 도움이 된다고 판단 된다. 
 
 
 
 
 ## 5. Insights
 
+   (1) 최근 "넷플릭스를 점령한 K-콘텐츠"와 같은 기사를 많이 접해, ["Language"]컬럼에서 Korean의 비중이 높을 거라고 판단하였으나, 실제로는 그렇지 못했다. 글로벌한 관점으로 보면 아직 영어로된 컨텐츠가 압도적으로 높은 순위를 차지한다
+
+   (2) 주로 휴식 시간에 넷플릭스를 찾게 되는점에 비추어, 자극적인 Action 혹은 Thriller와 같은 장르의 오리지널 시리즈물이 상위권을 차지할 것으로 생각했는데, Documentary가 최상위권을 차지하고 있었다(같은 기간 KOBIS의 통계를 보면 1위가 액션 2위가 애니메이션 3위가 드라마 였다). 
+
+
+
 
 
 
 ## 6. Difficulty & Limitation
+
+   (1) 데이터셋 자체에 한국인들이 많이 알고 있는 D.P와 같은 작품들이 존재하지 않아 자료 자체에 객관성이 있는지의 여부 의심할 수 밖에 없었다
+
+   (2) IMDB는 미국의 영화 정보 모음 사이트 이므로, 미국의 관점에서 넷플릭스 오리지널 시리즈의 평점을 매기는 방식을 사용하였으므로 각 해당 국가/지역의 사람들이 생각하는 평가의 관점과 다를 수 있다.
+
+   (3) 데이터 셋 자체게 Wikipedia에서 scrapped된 데이터 이므로 scrapping가능한 데이터만 추출 하여 실제 데이터와 다를 수 있다. 
 
 
 
