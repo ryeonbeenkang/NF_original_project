@@ -26,6 +26,13 @@
     df = df.drop(116)
    ```
 
+   (2) 그 외에는 결측치가 존재하지 않으며 아래의 코드로 확인해 본 결과 모든 컬럼의 값은 0이 되었다
+   
+   ```
+   df.isnull().sum()
+   ```
+
+
 ### **3. 컬럼제거**
 
    (1) [Premiere]컬럼의 값들을 value_counts()로 확인해 본 결과, 1~5의 값을 골고루 가지며, 특정일자에 집중된다던지 하는 현상이 보이지 않았다. 따라서, '개봉일자'는 평점에 큰 영향을 주지 않는다고 판단하여, 컬럼을 제거하기로 결정 하였다.
@@ -57,15 +64,23 @@
 
    ![3](https://github.com/ryeonbeenkang/NF_original_project/assets/47935123/7960bb24-7606-4047-ac3d-6783dd84a72f)
 
+
+   (3) df.info()를 통해 [IMDB Score]컬럼은 Dtype이 object였으므로, T통계량 계산을 위해 Dtype을 float로 변경
+
+
+   ```
+   df["IMDB Score"] = df["IMDB Score"].astype(float)
+   ```
+
    
 
 ## 3. T-test(One-sample, two-sample, pair-sample)
 
-   **(가설1) 장르별 평점이 다를 수 있는지 확인**
+   **(가설1) 장르별 1위 Documentary장르와 2위 Drama장르의 차이는 유의미 한지?**
 
 
 
-   **(가설2) 언어별 평점이 다를 수 있는지 확인**
+   **(가설2) 언어별 1위 English와 2위 Hindi언어의 차이는 유의미 한지?**
 
 
 
